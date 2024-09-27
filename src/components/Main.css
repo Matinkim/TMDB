@@ -1,0 +1,64 @@
+/* Main.css */
+.main-container {
+  padding: 20px;
+  background-color: #f0f0f0;
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+}
+
+.loading,
+.error {
+  text-align: center;
+  font-size: 1.5rem;
+  color: #ff5733; /* 에러 색상 */
+  margin: 20px 0;
+}
+
+.movie-list {
+  display: grid;
+  grid-template-columns: repeat(
+    auto-fill,
+    minmax(200px, 1fr)
+  ); /* 반응형 그리드 */
+  gap: 20px;
+  list-style-type: none;
+  padding: 0;
+}
+
+.movie-item {
+  background: #fff;
+  border-radius: 8px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  transition: transform 0.2s;
+}
+
+.movie-item:hover {
+  transform: translateY(-5px); /* 카드 호버 효과 */
+}
+
+.movie-item img {
+  width: 100%;
+  height: 300px; /* 고정된 높이 */
+  object-fit: cover; /* 이미지 비율 유지 */
+}
+
+.movie-info {
+  padding: 10px;
+}
+
+.movie-title {
+  font-size: 1.2rem;
+  margin: 10px 0;
+  font-weight: bold;
+  color: #333;
+}
+
+.movie-overview {
+  font-size: 0.9rem;
+  color: #666;
+  height: 60px; /* 일정한 높이로 설정 */
+  overflow: hidden; /* 넘치는 내용 숨기기 */
+}
