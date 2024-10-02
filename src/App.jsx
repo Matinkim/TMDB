@@ -1,15 +1,15 @@
 import Header from "./components/Header";
-import { MovieProvider } from "./provider/MovieProvider";
+import { MovieProvider } from "./provider/MovieProvider"; // UserProvider -> MovieProvider로 수정
 import Main from "./components/Main";
 
 function App() {
   return (
-    <MovieProvider>
-      <Header />
-      <button>오늘</button>
-      <button>이번주</button>
-      <Main />
-    </MovieProvider>
+    <>
+      <MovieProvider>
+        <Header />
+        <Main />
+      </MovieProvider>
+    </>
   );
 }
 

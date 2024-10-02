@@ -1,13 +1,9 @@
-import React, { useContext, useEffect } from "react";
+import React, { useContext } from "react";
 import { UserContext } from "../provider/MovieProvider";
 import "./Main.css";
 
 export default function Main() {
-  const { state, getMovies } = useContext(UserContext);
-
-  useEffect(() => {
-    getMovies();
-  }, [getMovies]);
+  const { state } = useContext(UserContext);
 
   return (
     <div className="main-container">
@@ -25,7 +21,6 @@ export default function Main() {
               )}
               <div className="movie-info">
                 <h1 className="movie-title">{movie.title}</h1>
-
                 <p className="movie-overview">{movie.overview}</p>
               </div>
             </li>

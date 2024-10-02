@@ -1,10 +1,11 @@
 .header {
-  background-color: #2c3e50; /* 헤더 배경색 */
+  background-color: rgb(41, 41, 121); /* 헤더 배경색 */
   color: white; /* 텍스트 색상 */
   padding: 20px; /* 패딩 추가 */
   display: flex; /* 플렉스 박스 레이아웃 */
   justify-content: space-between; /* 양 끝으로 정렬 */
   align-items: center; /* 수직 정렬 */
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3); /* 그림자 효과 추가 */
 }
 
 .logo {
@@ -30,9 +31,28 @@
 .nav-link {
   color: white; /* 링크 색상 */
   text-decoration: none; /* 링크 밑줄 제거 */
-  transition: color 0.3s; /* 색상 변경 애니메이션 */
+  transition: color 0.3s, transform 0.3s; /* 색상 및 변형 애니메이션 */
 }
 
 .nav-link:hover {
   color: #18bc9c; /* 호버 시 색상 변경 */
+  transform: scale(1.1); /* 호버 시 크기 증가 */
+}
+
+/* 모바일 반응형 스타일 */
+@media (max-width: 768px) {
+  .header {
+    flex-direction: column; /* 세로로 정렬 */
+    align-items: flex-start; /* 왼쪽 정렬 */
+  }
+
+  .nav-list {
+    flex-direction: column; /* 세로 방향으로 나열 */
+    margin-top: 10px; /* 간격 추가 */
+  }
+
+  .nav-item {
+    margin-left: 0; /* 왼쪽 간격 제거 */
+    margin-bottom: 10px; /* 항목 간 간격 추가 */
+  }
 }

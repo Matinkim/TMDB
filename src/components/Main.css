@@ -1,7 +1,6 @@
-/* Main.css */
 .main-container {
   padding: 20px;
-  background-color: #f0f0f0;
+  background-color: darkblue;
   max-width: 1200px;
   margin: 0 auto;
   display: flex;
@@ -12,7 +11,7 @@
 .error {
   text-align: center;
   font-size: 1.5rem;
-  color: #ff5733; /* 에러 색상 */
+  color: #0f0f0f; /* 에러 색상 */
   margin: 20px 0;
 }
 
@@ -20,7 +19,7 @@
   display: grid;
   grid-template-columns: repeat(
     auto-fill,
-    minmax(200px, 1fr)
+    minmax(220px, 1fr)
   ); /* 반응형 그리드 */
   gap: 20px;
   list-style-type: none;
@@ -29,36 +28,47 @@
 
 .movie-item {
   background: #fff;
-  border-radius: 8px;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  border-radius: 12px; /* 둥근 모서리 */
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
   overflow: hidden;
-  transition: transform 0.2s;
+  transition: transform 0.2s, box-shadow 0.2s; /* 호버 효과에 그림자 포함 */
 }
 
 .movie-item:hover {
   transform: translateY(-5px); /* 카드 호버 효과 */
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.2); /* 호버 시 그림자 효과 증가 */
 }
 
 .movie-item img {
   width: 100%;
-  height: 300px; /* 고정된 높이 */
+  height: 320px; /* 높이 약간 증가 */
   object-fit: cover; /* 이미지 비율 유지 */
 }
 
 .movie-info {
-  padding: 10px;
+  padding: 15px; /* 패딩 증가 */
 }
 
 .movie-title {
-  font-size: 1.2rem;
-  margin: 10px 0;
+  font-size: 1.3rem; /* 제목 크기 증가 */
+  margin: 5px 0; /* 마진 조정 */
   font-weight: bold;
-  color: #333;
+  color: #343a40; /* 텍스트 색상 */
 }
 
 .movie-overview {
   font-size: 0.9rem;
-  color: #666;
+  color: #495057; /* 더 부드러운 색상 */
   height: 60px; /* 일정한 높이로 설정 */
   overflow: hidden; /* 넘치는 내용 숨기기 */
+}
+
+/* 추가된 스타일 */
+.movie-item a {
+  text-decoration: none; /* 링크의 밑줄 제거 */
+  color: inherit; /* 부모 요소의 텍스트 색상 상속 */
+}
+
+.movie-item a:hover {
+  color: #007bff; /* 링크 호버 시 색상 변경 (필요에 따라 수정) */
 }
