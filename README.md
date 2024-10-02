@@ -19,6 +19,7 @@ useState, useContext
 
 # 사용된 API
 
+```
 📦src
 ┣ 📂assets
 ┃ ┗ 📜react.svg
@@ -37,6 +38,7 @@ useState, useContext
 ┣ 📜main.jsx
 ┣ 📜movieDummy.js
 ┗ 📜readme.md
+```
 
 # 배포 URL
 
